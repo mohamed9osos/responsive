@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintCraft Studio - Premium Mug Designer</title>
+    <link rel="stylesheet" href="designer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+   <div class="design-container">
+    <div class="split-container">
+        <div class="model-container">
+            <div class="container-header">
+                <h4><i class="fas fa-cube"></i> 3D Preview</h4>
+            </div>
+            <div id="modelViewer"></div>
+        </div>
+
+        <div class="splitter">
+            <div class="splitter-handle">
+                <i class="fas fa-grip-lines-vertical"></i>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <div class="container-header">
+                <h4><i class="fas fa-paint-brush"></i> Design Canvas</h4>
+            </div>
+
+            <div class="canvas-controls">
+                <button id="toggleSafeZone" class="btn-sm">
+                    <i class="fas fa-eye"></i> Safe Zone
+                </button>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="designCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <!-- Added jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="designer.js"></script>
+</body>
+
+</html>
