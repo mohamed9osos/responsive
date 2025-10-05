@@ -1,0 +1,133 @@
+export const modelsConfig = {
+  tshirts: {
+    tshirt1: {
+      name: "Basic T-Shirt",
+      glbPath: "glb/tshirt4.glb",
+      thumbnailPath: "images/tshirt.png",
+      cameraPosition: { x: 0, y: 0, z: 50 },
+      initialRotation: { y: Math.PI * 0.3 },
+      minDistance: 15,
+      maxDistance: 50,
+      parts: {
+        front: {
+          meshName: "Object_10",
+          canvasWidth: 540,
+          canvasHeight: 540,
+          safeZone: { top: 20, left: 20, right: 20, bottom: 20 },
+          patternZone: { top: 100, left: 100, right: 100, bottom: 100 },
+          margins: { top: 100, bottom: 100, left: 100, right: 100 },
+          imageMargins: { top: 100, bottom: 100, left: 100, right: 100 },
+          bleedMargin: 10,
+          clipType: "rect",
+          patternMaxScale: 0.5,
+          patternClipType: "rect",
+          imageMaxScale: 0.3,
+          patternRepeat: "repeat",
+          imageMinResolution: { width: 512, height: 512 },
+          materialDefaults: { metalness: 0.1, roughness: 0.6 },
+          elementLimits: { maxTexts: 10, maxImages: 5 },
+          guideLinesColor: "rgba(37, 99, 235, 0.5)",
+          textureRepeat: { x: 0.4, y: 0.4 },
+          textureOffset: { x: 0.305, y: 0.305 }
+        },
+        back: {
+          meshName: "Object_14",
+          canvasWidth: 540,
+          canvasHeight: 540,
+          safeZone: { top: 20, left: 20, right: 20, bottom: 20 },
+          patternZone: { top: 100, left: 100, right: 100, bottom: 100 },
+          margins: { top: 100, bottom: 100, left: 100, right: 100 },
+          imageMargins: { top: 100, bottom: 100, left: 100, right: 100 },
+          bleedMargin: 10,
+          clipType: "rect",
+          patternMaxScale: 0.5,
+          patternClipType: "rect",
+          imageMaxScale: 0.3,
+          patternRepeat: "repeat",
+          imageMinResolution: { width: 512, height: 512 },
+          materialDefaults: { metalness: 0.1, roughness: 0.6 },
+          elementLimits: { maxTexts: 10, maxImages: 5 },
+          guideLinesColor: "rgba(37, 99, 235, 0.5)",
+          textureRepeat: { x: 0.4, y: 0.4 },
+          textureOffset: { x: 0.305, y: 0.305 }
+        },
+        right_sleeve: {
+          meshName: "Object_9_1",
+          canvasWidth: 540,
+          canvasHeight: 540,
+          safeZone: { top: 20, left: 20, right: 20, bottom: 20 },
+          patternZone: { top: 50, left: 50, right: 50, bottom: 50 },
+          margins: { top: 50, bottom: 50, left: 50, right: 50 },
+          imageMargins: { top: 100, bottom: 100, left: 100, right: 100 },
+          bleedMargin: 10,
+          clipType: "rect",
+          patternMaxScale: 0.5,
+          patternClipType: "rect",
+          imageMaxScale: 0.3,
+          patternRepeat: "repeat",
+          imageMinResolution: { width: 512, height: 512 },
+          materialDefaults: { metalness: 0.1, roughness: 0.6 },
+          elementLimits: { maxTexts: 5, maxImages: 3 },
+          guideLinesColor: "rgba(37, 99, 235, 0.5)",
+          textureRepeat: { x: 0.2, y: 0.2 },
+          textureOffset: { x: 0.305, y: 0.305 }
+        },
+        left_sleeve: {
+          meshName: "Object_8_2",
+          canvasWidth: 540,
+          canvasHeight: 540,
+          safeZone: { top: 20, left: 20, right: 20, bottom: 20 },
+          patternZone: { top: 100, left: 100, right: 100, bottom: 100 },
+          margins: { top: 100, bottom: 100, left: 100, right: 100 },
+          imageMargins: { top: 100, bottom: 100, left: 100, right: 100 },
+          bleedMargin: 10,
+          clipType: "rect",
+          patternMaxScale: 0.5,
+          patternClipType: "rect",
+          imageMaxScale: 0.3,
+          patternRepeat: "repeat",
+          imageMinResolution: { width: 512, height: 512 },
+          materialDefaults: { metalness: 0.1, roughness: 0.6 },
+          elementLimits: { maxTexts: 5, maxImages: 3 },
+          guideLinesColor: "rgba(37, 99, 235, 0.5)",
+          textureRepeat: { x: 0.2, y: 0.2 },
+          textureOffset: { x: 0.305, y: 0.305 }
+        }
+      }
+    }
+  },
+  mugs: {
+    mug1: {
+      name: "Basic Mug",
+      glbPath: "mug.glb",
+      thumbnailPath: "images/mug.png",
+      cameraPosition: { x: 0, y: 0, z: 30 },
+      initialRotation: { y: Math.PI },
+      minDistance: 10,
+      maxDistance: 25,
+      parts: {
+        body: {
+          meshName: "Object_4",
+          canvasWidth: 614,
+          canvasHeight: 230,
+          safeZone: { top: 10, left: 60, right: 60, bottom: 10 },
+          patternZone: { top: 3, left: 60, right: 60, bottom: 5 },
+          margins: { top: 3, bottom: 5, left: 60, right: 60 },
+          imageMargins: { top: 10, bottom: 10, left: 60, right: 60 },
+          bleedMargin: 10,
+          clipType: "rect",
+          patternMaxScale: 0.5,
+          patternClipType: "rect",
+          imageMaxScale: 0.3,
+          patternRepeat: "repeat",
+          imageMinResolution: { width: 512, height: 512 },
+          materialDefaults: { metalness: 0.1, roughness: 0.6 },
+          elementLimits: { maxTexts: 10, maxImages: 5 },
+          guideLinesColor: "rgba(37, 99, 235, 0.5)",
+          textureRepeat: { x: 1, y: 1 },
+          textureOffset: { x: 0, y: 0 }
+        }
+      }
+    }
+  }
+};

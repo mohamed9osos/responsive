@@ -1,0 +1,238 @@
+/* ====== الأساسيات العامة ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f4f6;
+  font-family: "Inter", sans-serif;
+}
+
+/* ====== الحاوية الأساسية للتصميم ====== */
+.design-container {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* ====== تقسيم الشاشة ====== */
+.split-container {
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f9fafb;
+}
+
+/* ====== النصف الخاص بالمج ====== */
+.model-container {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+/* ====== النصف الخاص بالتصميم أو الكانفس ====== */
+.canvas-container {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+
+/* ====== ترويسة كل جزء ====== */
+.container-header {
+  text-align: left;
+  background: #e5e7eb;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #d1d5db;
+  width: 100%;
+}
+
+.container-header h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ====== الموديل 3D ====== */
+#modelViewer {
+  flex: 1;
+  background: #ffffff;
+}
+
+/* ====== تغليف الكانفس ====== */
+.canvas-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.canvas-wrapper canvas {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+#designCanvas {
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ====== أدوات التحكم في الكانفس ====== */
+.canvas-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.7rem;
+  font-size: 0.8rem;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-sm:hover {
+  background: #f3f4f6;
+}
+
+.btn-sm.active {
+  background: #3b82f6;
+  color: #fff;
+  border-color: #3b82f6;
+}
+
+/* ====== السبلتر (الفاصل القابل للسحب) ====== */
+.splitter {
+  width: 6px;
+  background: #d1d5db;
+  cursor: col-resize;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 10;
+}
+
+.splitter:hover {
+  background: #60a5fa;
+}
+
+.splitter-handle {
+  width: 26px;
+  height: 50px;
+  background: #fff;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: col-resize;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.splitter:hover .splitter-handle {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+/* ====== الأنيميشن ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== تصغير تدريجي للكانفس من 1130 إلى 1024 ====== */
+@media (max-width: 1130px) and (min-width: 1025px) {
+  .canvas-wrapper canvas {
+    transform: scale(0.85);
+  }
+}
+
+/* ====== الاستجابة للشاشات ====== */
+@media (max-width: 1024px) {
+  .design-container {
+    padding: 1.5rem;
+  }
+
+  .split-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .splitter {
+    width: 100%;
+    height: 6px;
+    cursor: row-resize;
+  }
+
+  .splitter-handle {
+    width: 50px;
+    height: 20px;
+  }
+
+  .model-container,
+  .canvas-container {
+    width: 100%;
+    min-width: 0;
+    min-height: 280px;
+  }
+
+  .canvas-wrapper canvas {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .design-container {
+    padding: 1rem;
+  }
+
+  .canvas-wrapper canvas {
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 480px) {
+  .split-container {
+    border-radius: 0;
+  }
+
+  .model-container,
+  .canvas-container {
+    height: 240px;
+  }
+
+  .canvas-wrapper canvas {
+    transform: scale(0.6);
+  }
+}
